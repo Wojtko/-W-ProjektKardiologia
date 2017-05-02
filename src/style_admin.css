@@ -1,6 +1,6 @@
 body
 {
-	background-color: white;
+	background-color: #bc4f4f;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	color: black;
@@ -31,7 +31,7 @@ a:link
 
 a:hover
 {
-	text-shadow: 1px 1px white;
+	text-shadow: 1px 1px gray;
 }
 
 a:visited

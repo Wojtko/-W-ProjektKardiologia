@@ -27,13 +27,20 @@
 	</div>
 
 	<div class="main">
+
+		<h3>Pacjenci zaakceptowani</h1>
+
 		<table id="patient">
 			<thead>
 				<tr>
 					<th>
 						<div class="btn" data-panelid="1">
 							<table>
-								<tr><th><b>Imię: </b>Jan</th> <th><b>Nazwisko:</b>Kowalski</th></tr>
+								<tr>
+									<th><b>Imię: </b>Jan</th> 
+									<th><b>Nazwisko: </b>Kowalski</th>
+									<th><b>Status: </b> <b style="color: green;">Zaakceptowano</b></th>
+								</tr>
 							</table>
 						</div>
 
@@ -55,6 +62,19 @@
 									<tr>
 										<th colspan="2">TU BĘDZIE MOŻNA POBRAĆ PLIK</th>
 									</tr>
+									<tr>
+										<th colspan="2">
+											<b>Status:</b>
+
+											<form action="change_status.php" method="post">
+												<input type="radio" name="status" value="Oczekiwanie na zaakceptowanie">Oczekiwanie na zaakceptowanie
+												<input type="radio" name="status" value="Zaakceptowano">Zaakceptowano
+												<input type="radio" name="status" value="Badania">Badania
+												<input type="radio" name="status" value="Oczekiwanie na operacje">Oczekiwanie na operacje <br>
+												<input type="submit" value="Zmień">
+											</form>
+										</th>
+									</tr>
 								</thead>
 							</table>
 						</div>
@@ -66,7 +86,11 @@
 					<th>
 						<div class="btn" data-panelid="2">
 							<table>
-								<tr><th><b>Imię: </b>Jan</th> <th><b>Nazwisko:</b>Kowalski</th></tr>
+								<tr>
+									<th><b>Imię: </b>Jan</th> 
+									<th><b>Nazwisko: </b>Kowalski</th>
+									<th><b>Status: </b> <b style="color: orange;">Oczekiwanie na zaakceptowanie</b></th>
+								</tr>
 							</table>
 						</div>
 
@@ -87,6 +111,19 @@
 									</tr>
 									<tr>
 										<th colspan="2">TU BĘDZIE MOŻNA POBRAĆ PLIK</th>
+									</tr>
+									<tr>
+										<th colspan="2">
+											<b>Status:</b>
+
+											<form action="change_status.php" method="post">
+												<input type="radio" name="status" value="Oczekiwanie na zaakceptowanie">Oczekiwanie na zaakceptowanie
+												<input type="radio" name="status" value="Zaakceptowano">Zaakceptowano
+												<input type="radio" name="status" value="Badania">Badania
+												<input type="radio" name="status" value="Oczekiwanie na operacje">Oczekiwanie na operacje <br>
+												<input type="submit" value="Zmień">
+											</form>
+										</th>
 									</tr>
 								</thead>
 							</table>

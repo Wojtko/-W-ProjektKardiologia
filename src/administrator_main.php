@@ -9,7 +9,7 @@
 	<meta name="keywords" content="lekarze, kariochirurg, kardiolog, pacjent, choroba, serce, medycyna">
 	<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" type = "text/css"/>
 
-	<link rel="stylesheet" href="style_admin.css">
+	<link rel="stylesheet" href="style_admi.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,20 +18,16 @@
 </head> 
 <body>
 	
-	<div class="table">
-		<table>
-			<thead>
-				<tr>
-					<th><a href="#" style="color: #EF2D56;">Główna</a></th>
-					<th><a href="#">Kardiolodzy</a></th>
-					<th><a href="#">Pacjenci</a></th>
-				</tr>
-			</thead>
-		</table>
+	<div>
+		<ul id="test">
+			<li><a href="administrator_main.php" style="color: #EF2D56;">Główna</a></li>
+			<li><a href="#">Kardiolodzy</a></li>
+			<li><a href="#">Pacjenci</a></li>
+		</ul>
 	</div>
 
 	<div class="main">
-		<table>
+		<table id="patient">
 			<thead>
 				<tr>
 					<th>

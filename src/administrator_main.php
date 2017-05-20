@@ -21,14 +21,14 @@
 	<div>
 		<ul id="test">
 			<li><a href="administrator_main.php" style="color: #EF2D56;">Główna</a></li>
-			<li><a href="#">Kardiolodzy</a></li>
+			<li><a href="#administrator_kardio.php">Kardiolodzy</a></li>
 			<li><a href="#">Pacjenci</a></li>
 		</ul>
 	</div>
 
 	<div class="main">
 
-		<h3>Pacjenci zaakceptowani</h1>
+		<h3>Pacjenci zaakceptowani</h3>
 
 		<table id="patient">
 			<thead>

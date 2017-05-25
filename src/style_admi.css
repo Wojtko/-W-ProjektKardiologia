@@ -76,3 +76,15 @@ h3
 	width: 50%;
 	margin: 0 auto;
 }
+
+#active a:visited,
+a:link
+{
+	 color: #ff0066;
+}
+
+#active a:hover
+{
+	color: gray;
+}
+

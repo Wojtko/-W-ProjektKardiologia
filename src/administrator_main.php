@@ -20,9 +20,10 @@
 	
 	<div>
 		<ul id="test">
-			<li><a href="administrator_main.php" style="color: #EF2D56;">Główna</a></li>
+			<li><a href="administrator_main.php" id="active">Główna</a></li>
 			<li><a href="#">Kardiolodzy</a></li>
 			<li><a href="#">Pacjenci</a></li>
+			<li style="float:right"><a href="#">Wyloguj</a></li>
 		</ul>
 	</div>
 

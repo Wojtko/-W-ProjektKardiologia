@@ -1,0 +1,52 @@
+body
+{
+	background-color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: black;
+	width: 50%;
+	margin: 0 auto;
+}
+
+h1
+{
+	text-align: center;
+}
+
+table
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th
+{
+	font-weight: normal;
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(odd)
+{
+	background: #dddddd;
+}
+
+.table
+{
+	display: block;
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
+
+.table_admin
+{
+	text-align: center;
+}
+
+.login
+{
+	text-align: center;
+}

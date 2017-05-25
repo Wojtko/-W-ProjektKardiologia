@@ -20,8 +20,13 @@
 	
 	<div>
 		<ul id="test">
+<<<<<<< HEAD
 			<li><a href="administrator_main.php" id="active">Główna</a></li>
 			<li><a href="#">Kardiolodzy</a></li>
+=======
+			<li><a href="administrator_main.php" style="color: #EF2D56;">Główna</a></li>
+			<li><a href="#administrator_kardio.php">Kardiolodzy</a></li>
+>>>>>>> origin/master
 			<li><a href="#">Pacjenci</a></li>
 			<li style="float:right"><a href="#">Wyloguj</a></li>
 		</ul>
@@ -29,7 +34,7 @@
 
 	<div class="main">
 
-		<h3>Pacjenci zaakceptowani</h1>
+		<h3>Pacjenci zaakceptowani</h3>
 
 		<table id="patient">
 			<thead>

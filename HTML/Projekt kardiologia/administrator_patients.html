@@ -27,7 +27,55 @@
 	</div>
 
 	<div class="main">
+		<h3>Pacjenci oczekujący na zaakcpetowanie</h3>
+		
+		<table id="patient">
+			<thead>
+				<tr>
+					<th>
+						<div class="btn" data-panelid="1">
+							<table>
+								<tr>
+									<th><b>Imię: </b>Jan</th> 
+									<th><b>Nazwisko: </b>Kowalski</th>
+								</tr>
+							</table>
+						</div>
 
+						<div class="data" id="data1">
+							<table>
+								<thead>
+									<tr>
+										<th><b>Data urodzenia:</b></th>
+										<th>12.06.1978</th>
+									</tr>
+									<tr>
+										<th><b>Adres:</b></th>
+										<th>ul.Wiejska 13 83-000 Gdańsk</th>
+									</tr>
+									<tr>
+										<th><b>Ropoznanie:</b></th>
+										<th>Chory ma niesprawne serce.</th>
+									</tr>
+									<tr>
+										<th colspan="2">TU BĘDZIE MOŻNA POBRAĆ PLIK</th>
+									</tr>
+									<tr>
+										<th colspan="2">
+											<b>Status:</b>
+
+											<form action="change_status.php" method="post">
+												<input type="submit" value="Zatwierdź">
+											</form>
+										</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</th>
+				</tr>
+			</thead>
+		</table>
 	</div>
 	
 </body>

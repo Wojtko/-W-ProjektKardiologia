@@ -17,6 +17,64 @@
 
 </head> 
 <body>
-	
+	<div>
+		<ul id="test">
+			<li><a href="#" class="active">Główna</a></li>
+			<li><a href="#">Zgłoś</a></li>
+			<li style="float:right"><a href="#">Wyloguj</a></li>
+		</ul>
+	</div>
+
+	<div class="main">
+
+		<div>
+			<h3>Status Pacjentów</h3>
+
+			<form action="find_patient.php" method="post" class="find">
+				<input type="text" name="value">
+				<input type="submit" value="Szukaj">
+			</form>
+		</div>
+		
+
+		<table id="patient">
+			<thead>
+				<tr>
+					<th>
+						<div class="btn" data-panelid="1">
+							<table>
+								<tr>
+									<th><b>Imię: </b>Maria</th>
+									<th><b>Nazwisko: </b>Same</th>
+									<th><b>Status: </b><b style="orange">Oczekiwanie</b></th>
+								</tr>
+							</table>
+						</div>
+
+						<div class="data" id="data1">
+							<table>
+								<tr>
+									<th><b>Data urodzenia:</b></th>
+									<th>12.06.1978</th>
+								</tr>
+								<tr>
+									<th><b>Adres:</b></th>
+									<th>ul.Wiejska 13 83-000 Gdańsk</th>
+								</tr>
+								<tr>
+									<th><b>Ropoznanie:</b></th>
+									<th>Chory ma niesprawne serce.</th>
+								</tr>
+								<tr>
+									<th colspan="2">TU BĘDZIE MOŻNA POBRAĆ PLIK</th>
+								</tr>
+							</table>
+						</div>
+					</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+
 </body>
 </html>

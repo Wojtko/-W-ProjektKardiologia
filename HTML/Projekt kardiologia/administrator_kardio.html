@@ -20,7 +20,7 @@
 	<div>
 		<ul id="test">
 			<li><a href="administrator_main.php">Główna</a></li>
-			<li><a href="administrator_kardio.php" style="color: #EF2D56;">Kardiolodzy</a></li>
+			<li><a href="administrator_kardio.php" class="active">Kardiolodzy</a></li>
 			<li><a href="#">Pacjenci</a></li>
 			<li style="float:right"><a href="#">Wyloguj</a></li>
 		</ul>
@@ -28,7 +28,14 @@
 
 	<div class="main">
 
-		<h3>Kardiolodzy oczekujący na przyjęcie</h3>
+		<div>
+			<h3>Kardiolodzy oczekujący na przyjęcie</h3>
+
+			<form action="find_patient.php" method="post" class="find">
+				<input type="text" name="value">
+				<input type="submit" value="Szukaj">
+			</form>
+		</div>
 
 		<table>
 			<thead>
@@ -80,8 +87,10 @@
 									</tr>
 								</thead>
 							</table>
-
-							<input type="submit" value="Zatwierdź kardiologa">
+								
+							<form action="accept_kardio.php" method="post">
+								<input type="submit" value="Zatwierdź kardiologa">
+							</form>
 
 						</div>
 					</th>

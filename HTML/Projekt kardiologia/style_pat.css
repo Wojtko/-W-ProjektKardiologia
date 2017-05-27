@@ -4,28 +4,36 @@ body
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	color: black;
+	width: 50%;
 	margin: 0 auto;
 }
 
 table
 {
-	border-bottom: 1px solid #ddd;
-	border-collapse: none;
+	border-collapse: collapse;
 	width: 100%;
-	font-size: 80%;
 }
 
 td,
 th
 {
 	font-weight: normal;
-	text-align: center;
+	border: 1px solid #dddddd;
+	text-align: left;
 	padding: 8px;
 }
 
-tr:hover 
+tr:nth-child(odd)
 {
-	background-color: gray;
+	background: #dddddd;
+}
+
+.table
+{
+	display: block;
+	margin: auto;
+	width: 50%;
+	text-align: center;
 }
 
 a:link,
@@ -43,7 +51,7 @@ a:hover
 
 ul
 {
-	background-color: #131515;
+	background-color: #f5f5f5;
 	list-style-type: none;
     margin: 0;
     padding: 0;
@@ -99,11 +107,4 @@ a:hover.active
 .find
 {
 	float:right;
-}
-
-.warning
-{
-	text-align: center;
-	border: 2px;
-	border-color: gray;
 }

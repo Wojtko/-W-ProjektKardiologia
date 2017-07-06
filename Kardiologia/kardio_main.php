@@ -1,3 +1,13 @@
+<?php 
+	session_start();
+
+	if (!isset($_SESSION['zalogowany']))
+	{
+		header('Location: index.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -19,9 +29,13 @@
 <body>
 	<div>
 		<ul id="test">
-			<li><a href="#" class="active">Główna</a></li>
-			<li><a href="#">Zgłoś</a></li>
-			<li style="float:right"><a href="#">Wyloguj</a></li>
+			<li><a href="kardio_main.php" class="active">Główna</a></li>
+			<li><a href="kardio_submit.php">Zgłoś</a></li>
+			<li style="float:right">
+			<?php 
+				echo '<a href="logout.php">Wyloguj ('.$_SESSION['name']." ".$_SESSION['surname'].")</a>";
+			?>
+			</li>
 		</ul>
 	</div>
 

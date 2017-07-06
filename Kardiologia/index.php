@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php 
+ 
+	session_start();
+
+	if (isset($_SESSION['zalogowany']) && ($_SESSION['zalogowany'] == true)) 
+	{
+    	if($_SESSION['ranga'] == 1)
+			{
+				header('Location: administrator_main.php');
+				exit();
+			}
+			else if ($_SESSION['first_time'] == 0)
+			{
+				header('Location: kardio_main.php');
+				exit();
+			}
+			else
+			{
+				header('Location: kardio_main_first.php');
+				exit();
+			}
+	}
+
+ ?>
+
+ <!DOCTYPE html>
 <html lang="pl">
 <head>
 
@@ -23,10 +48,16 @@
 				Podaj login <br/>
 				<input type="text" name="login"> <br/> <br/>
 				Podaj hasło<br/>
-				<input type="password" name="passowrd"> <br/> <br/>
+				<input type="password" name="password"> <br/> <br/>
 				<input type="submit" value="Zaloguj się"> <br/>
-				<a href="registration.php">Nie masz jeszcze konta? Zarejestruj się już dziś!</a>
 			</form>
+
+			<?php
+				if(isset($_SESSION['error']))	echo $_SESSION['error'];
+			?>
+			
+			<br/> <a href="registration.php">Nie masz jeszcze konta? Zarejestruj się już dziś!</a>
+
 		</div>
 	</div>
 

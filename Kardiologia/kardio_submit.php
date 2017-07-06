@@ -1,3 +1,13 @@
+<?php 
+	session_start();
+
+	if (!isset($_SESSION['zalogowany']))
+	{
+		header('Location: index.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -19,9 +29,13 @@
 <body>
 	<div>
 		<ul id="test">
-			<li><a href="#">Główna</a></li>
-			<li><a href="#" class="active">Zgłoś</a></li>
-			<li style="float:right"><a href="#">Wyloguj</a></li>
+			<li><a href="kardio_main.php">Główna</a></li>
+			<li><a href="kardio_submit.php" class="active">Zgłoś</a></li>
+			<li style="float:right">
+			<?php 
+				echo '<a href="logout.php">Wyloguj ('.$_SESSION['name']." ".$_SESSION['surname'].")</a>";
+			?>
+			</li>
 		</ul>
 	</div>
 
@@ -48,15 +62,19 @@
 					</tr>
 					<tr>
 						<th colspan="2">
-							<input type="email" name="email">
+							<input type="text" name="birth">
 						</th>
 					</tr>
 					<tr>
-						<th colspan="2"><b>Adres(ULICA NR 00-000 MIASTO):</b></th>
+						<th colspan="1"><b>Ulica i nr.: </b></th>
+						<th colspan="1"><b>Kod pocz. i miejscowość:</b></th>
 					</tr>
 					<tr>
-						<th colspan="2">
-							<input type="text" name="adress">
+						<th colspan="1">
+							<input type="text" name="adress1">
+						</th>
+						<th colspan="1">
+							<input type="text" name="adress2">
 						</th>
 					</tr>
 					<tr>

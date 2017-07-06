@@ -1,3 +1,13 @@
+<?php 
+	session_start();
+
+	if (!isset($_SESSION['zalogowany']))
+	{
+		header('Location: index.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -21,7 +31,11 @@
 		<ul id="test">
 			<li><a href="#" class="active">Główna</a></li>
 			<li><a href="#">Zgłoś</a></li>
-			<li style="float:right"><a href="#">Wyloguj</a></li>
+			<li style="float:right">
+			<?php 
+				echo '<a href="logout.php">Wyloguj ('.$_SESSION['name']." ".$_SESSION['surname'].")</a>";
+			?>
+			</li>
 		</ul>
 	</div>
 
@@ -31,7 +45,7 @@
 			
 			<h2>Przed skorzystaniem z portalu prosimy o zmianę hasła</h2>
 
-			<form action="acceptereg.php" method="post">
+			<form action="do_regist2.php" method="post">
 				<p>Kod z rejestracji</p>
 				<input type="text" name="code">
 
@@ -44,6 +58,15 @@
 				<p>Powtórz hasło: </p>
 				<input type="password" name="new2">
 					
+				<br>
+				
+				<?php
+						if(isset($_SESSION['errorreg']))	echo $_SESSION['errorreg'];
+						if(isset($_SESSION['succes']))	echo $_SESSION['succes'];
+						unset($_SESSION['succes']);
+						unset($_SESSION['errorreg']);
+				?>
+
 				<br>
 
 				<input type="submit" value="Wyślij">

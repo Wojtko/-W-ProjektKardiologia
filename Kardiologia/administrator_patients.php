@@ -1,3 +1,13 @@
+<?php 
+	session_start();
+
+	if (!isset($_SESSION['zalogowany']) || $_SESSION['ranga'] == 0)
+	{
+		header('Location: index.php');
+		exit();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -21,8 +31,12 @@
 		<ul id="test">
 			<li><a href="administrator_main.php">Główna</a></li>
 			<li><a href="administrator_kardio.php">Kardiolodzy</a></li>
-			<li><a href="#" class="active">Pacjenci</a></li>
-			<li style="float:right"><a href="#">Wyloguj</a></li>
+			<li><a href="administrator_patients.php" class="active">Pacjenci</a></li>
+			<li style="float:right">
+			<?php 
+				echo '<a href="logout.php">Wyloguj ('.$_SESSION['name']." ".$_SESSION['surname'].")</a>";
+			?>
+			</li>
 		</ul>
 	</div>
 

@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -23,7 +26,7 @@
 			<br/><br/>
 			
 			<div class="table">
-				<form action="doregist.php" method="post">
+				<form action="do_regist.php" method="post">
 					<table>
 						<thead>
 							<tr>
@@ -35,7 +38,7 @@
 									<input type="text" name="name">
 								</th>
 								<th>
-									<input type="text" name="name">
+									<input type="text" name="surname">
 								</th>
 							</tr>
 							<tr>
@@ -51,7 +54,7 @@
 							</tr>
 							<tr>
 								<th colspan="2">
-									<input type="text" name="pesel">
+									<input type="text" name="pesel"><br>
 								</th>
 							</tr>
 							<tr>
@@ -59,7 +62,7 @@
 							</tr>
 							<tr>
 								<th colspan="2">
-									<input type="text" name="nr.p">
+									<input type="text" name="nrp">
 								</th>
 							</tr>
 							<tr>
@@ -72,8 +75,15 @@
 							</tr>
 						</thead>
 					</table>
+					<?php
+						if(isset($_SESSION['errorreg']))	echo $_SESSION['errorreg'];
+						if(isset($_SESSION['succes']))	echo $_SESSION['succes'];
+						unset($_SESSION['succes']);
+						unset($_SESSION['errorreg']);
+					?>
 
 					<input type="submit" value="Wyślij zgłoszenie">
+					<br><br><a href="index.php">Powrót do storny głównej</a>
 
 				</form>
 			</div>
